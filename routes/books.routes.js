@@ -13,7 +13,7 @@ bookRouter.post("/", async (req, res) => {
 
 bookRouter.get("/", async (req, res) => {
   try {
-    const book = await bookModel.find();
+    const book = await bookModel.find().populate("authorId");
     return res.status(200).send(book);
   } catch (er) {
     return res.status(500).send({ message: er.message });
