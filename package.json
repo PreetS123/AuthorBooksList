@@ -1,0 +1,28 @@
+{
+  "name": "authorbookslist",
+  "version": "1.0.0",
+  "description": "A small backend application that keeps track of books and its author. A single author can publish multiple books.",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PreetS123/AuthorBooksList.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PreetS123/AuthorBooksList/issues"
+  },
+  "homepage": "https://github.com/PreetS123/AuthorBooksList#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.0",
+    "nodemon": "^2.0.20"
+  }
+}
