@@ -11,6 +11,15 @@ AuthorRouter.get("/", async (req, res) => {
   }
 });
 
+AuthorRouter.get("/:id", async (req, res) => {
+  try {
+    const author = await authorModel.find(req.params.id);
+    return res.status(200).send(author);
+  } catch (er) {
+    return res.status(500).send({ message: er.message });
+  }
+});
+
 AuthorRouter.post("/", async (req, res) => {
   try {
     const author = await authorModel.create(req.body);
