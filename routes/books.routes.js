@@ -20,7 +20,7 @@ bookRouter.get("/", async (req, res) => {
   }
 });
 
-bookRouter.get("/book/:id", async (req, res) => {
+bookRouter.get("/:id", async (req, res) => {
     try {
       const book = await bookModel.find(req.params.id);
       return res.status(200).send(book);
