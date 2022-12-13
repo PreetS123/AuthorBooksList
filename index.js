@@ -2,6 +2,7 @@ let express= require('express');
 let cors=require('cors');
 const connection = require('./config');
 const AuthorRouter = require('./routes/Author.routes');
+const bookRouter = require('./routes/books.routes');
 
 let app=express();
 
@@ -13,6 +14,7 @@ app.get('/',(req,res)=>{
 })
 
 app.use('/author',AuthorRouter);
+app.use('/books',bookRouter);
 
 
 
